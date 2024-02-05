@@ -29,6 +29,7 @@ public class UserAccount extends AuditingFields {
     @Column(nullable = false)
     private String userPassword;
 
+
     /**
      * 권한 테이블을 따로 만들어서 맵핑하는 방법도 있겠지만
      * 이번 어드민 강의에선 다른 방법으로 접근
