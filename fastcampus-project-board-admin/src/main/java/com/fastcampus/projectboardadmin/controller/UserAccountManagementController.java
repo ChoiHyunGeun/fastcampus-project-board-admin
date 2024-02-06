@@ -20,6 +20,6 @@ public class UserAccountManagementController {
             Model model
     ) {
 
-        return "management/userAccounts";
+        return "management/user-accounts";
     }
 }

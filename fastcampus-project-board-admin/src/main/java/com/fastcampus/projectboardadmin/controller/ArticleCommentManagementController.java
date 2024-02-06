@@ -19,6 +19,6 @@ public class ArticleCommentManagementController {
             @PageableDefault(size = 10, sort = "createDate", direction = Sort.Direction.DESC)Pageable pageable,
             Model model
     ) {
-        return "/management/articleComments";
+        return "/management/article-comments";
     }
 }
