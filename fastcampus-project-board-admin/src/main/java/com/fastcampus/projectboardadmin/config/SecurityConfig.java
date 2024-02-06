@@ -25,6 +25,7 @@ public class SecurityConfig {
         return http
                 .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()).formLogin(withDefaults()) //아무 일도 안하는 기본 값으로 동작하길 원한다면 withDefaults()를 사용
                 .logout(logout -> logout.logoutSuccessUrl("/"))
+                .oauth2Login(withDefaults())
                 .build();
     }
 }
