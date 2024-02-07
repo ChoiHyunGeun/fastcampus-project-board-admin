@@ -6,6 +6,7 @@ logging:
     com.fastcampus.projectboardadmin: debug
     org.springframework.web.servlet: debug
     org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.springframework.web.client.RestTemplate: debug
 
 spring:
   datasource:
@@ -52,6 +53,8 @@ spring:
 
 server:
   port: 8081
+
+project.board.url: http://localhost:8080
 
 ---
 
