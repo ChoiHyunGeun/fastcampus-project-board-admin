@@ -1,6 +1,5 @@
 package com.fastcampus.projectboardadmin.controller;
 
-import ch.qos.logback.core.model.Model;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 @RequestMapping("/admin/members")
 @Controller
-public class AdminUserAccountController {
+public class AdminAccountController {
 
     @GetMapping
     public String members(
