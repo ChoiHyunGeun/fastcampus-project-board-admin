@@ -10,6 +10,6 @@
   <attr sel="#main-header-title" th:text="'에러 페이지'" />
   <attr sel="#breadcrumb-home" th:href="@{/}" th:text="'홈'" />
   <attr sel="#breadcrumb-current-page" th:text="'에러 페이지'" />
-  <attr sel="#error-status" th:text="${#response.status}" />
+  <attr sel="#error-status" th:text="${response}" />
   <attr sel="#error-message" th:text="'잘못된 호출입니다.'" />
 </thlogic>
