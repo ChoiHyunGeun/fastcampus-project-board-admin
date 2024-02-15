@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AdminErrorController implements ErrorController {
 
+    //TODO 에러 상태를 좀 더 세분화하기
     @RequestMapping("/error")
     public String handleError(
             HttpServletRequest request,
