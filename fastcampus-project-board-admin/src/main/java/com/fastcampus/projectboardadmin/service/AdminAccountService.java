@@ -1,5 +1,6 @@
 package com.fastcampus.projectboardadmin.service;
 
+import com.fastcampus.projectboardadmin.domain.AdminAccount;
 import com.fastcampus.projectboardadmin.domain.constant.RoleType;
 import com.fastcampus.projectboardadmin.dto.AdminAccountDto;
 import com.fastcampus.projectboardadmin.repository.AdminAccountRepository;
@@ -17,18 +18,22 @@ public class AdminAccountService {
     private final AdminAccountRepository adminAccountRepository;
 
     public Optional<AdminAccountDto> searchUser(String username) {
-        return Optional.empty();
+        return adminAccountRepository.findById(username).map(AdminAccountDto::from);
     }
 
     public AdminAccountDto saveUser(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo) {
-        return null;
+        return AdminAccountDto.from(
+                adminAccountRepository.save(AdminAccount.of(userId, userPassword, roleTypes, email, nickname, memo))
+        );
     }
 
     public List<AdminAccountDto> users() {
-        return List.of();
+        return adminAccountRepository.findAll().stream()
+                .map(AdminAccountDto::from)
+                .toList();
     }
 
     public void deleteUser(String username) {
-
+        adminAccountRepository.deleteById(username);
     }
 }
