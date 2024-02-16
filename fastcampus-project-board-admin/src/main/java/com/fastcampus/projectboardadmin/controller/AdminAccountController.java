@@ -17,14 +17,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Slf4j
-@RequestMapping("/admin/members")
 @RequiredArgsConstructor
 @Controller
 public class AdminAccountController {
 
     private final AdminAccountService adminAccountService;
 
-    @GetMapping
+    @GetMapping("/admin/members")
     public String members(
             ModelMap model,
             HttpServletRequest httpServletRequest
