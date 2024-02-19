@@ -31,7 +31,7 @@
           { name: "memo", title: "메모", type: "text", width: 150 },
           { name: "roleTypes", title: "권한", type: "text", width: 100 },
           { name: "createUser", title: "작성자", type: "text", width: 60 },
-          { name: "createdAt", title: "작성일시", type: "text", width: 100 },
+          { name: "createDate", title: "작성일시", type: "text", width: 100 },
           { type: "control" }
         ],
 
