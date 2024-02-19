@@ -48,7 +48,7 @@ public class ArticleManagementService {
     }
 
     public void deleteArticle(Long articleId) {
-        URI uri = UriComponentsBuilder.fromHttpUrl(projectProperties.board().url() + "/api/articles" + articleId)
+        URI uri = UriComponentsBuilder.fromHttpUrl(projectProperties.board().url() + "/api/articles/" + articleId)
                 .build()
                 .toUri();
 

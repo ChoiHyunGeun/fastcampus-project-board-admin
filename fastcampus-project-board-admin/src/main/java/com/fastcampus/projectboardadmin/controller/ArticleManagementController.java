@@ -41,18 +41,16 @@ public class ArticleManagementController {
     @ResponseBody
     @GetMapping("/{articleId}")
     public ArticleResponse article(
-            @PathVariable Long articleId,
-            ModelMap model,
-            HttpServletRequest httpServletRequest
+            @PathVariable Long articleId
     ) {
         ArticleDto article = articleManagementService.getArticle(articleId);
-
 
         return ArticleResponse.withContent(article);
     }
 
-    @DeleteMapping("/{articleId}")
+    @PostMapping("/{articleId}")
     public String deleteArticle(@PathVariable Long articleId) {
+        articleManagementService.deleteArticle(articleId);
 
         return "redirect:/management/articles";
     }
