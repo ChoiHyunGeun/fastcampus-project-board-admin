@@ -25,7 +25,7 @@
                 <attr sel="td[1]" th:text="${userAccount.nickname}" />
                 <attr sel="td[2]" th:text="${userAccount.email}" />
                 <attr sel="td[3]" th:text="${userAccount.memo}" />
-                <attr sel="td[4]" th:text="${userAccount.createdBy}" />
+                <attr sel="td[4]" th:text="${userAccount.createUser}" />
                 <attr sel="td[5]/time" th:datetime="${userAccount.createDate}" th:text="${#temporals.format(userAccount.createDate, 'yyyy-MM-dd HH:mm:ss')}" />
             </attr>
         </attr>
