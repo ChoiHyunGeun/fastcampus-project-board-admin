@@ -30,7 +30,7 @@
           { name: "email", title: "이메일", type: "text", width: 120 },
           { name: "memo", title: "메모", type: "text", width: 150 },
           { name: "roleTypes", title: "권한", type: "text", width: 100 },
-          { name: "createdBy", title: "작성자", type: "text", width: 60 },
+          { name: "createUser", title: "작성자", type: "text", width: 60 },
           { name: "createdAt", title: "작성일시", type: "text", width: 100 },
           { type: "control" }
         ],
