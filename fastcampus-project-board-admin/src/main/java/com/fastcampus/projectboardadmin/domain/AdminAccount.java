@@ -20,7 +20,7 @@ import java.util.Set;
         @Index(columnList = "createUser")
 })
 @Entity
-public class UserAccount extends AuditingFields {
+public class AdminAccount extends AuditingFields {
     @Id
     @Column(length = 50)
     private String userId;
@@ -57,9 +57,9 @@ public class UserAccount extends AuditingFields {
     private String memo;
 
 
-    protected UserAccount() {}
+    protected AdminAccount() {}
 
-    private UserAccount(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo, String createUser) {
+    private AdminAccount(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo, String createUser) {
         this.userId = userId;
         this.userPassword = userPassword;
         this.roleTypes = roleTypes;
@@ -80,8 +80,8 @@ public class UserAccount extends AuditingFields {
      * @param memo
      * @return
      */
-    public static UserAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo) {
-        return UserAccount.of(userId, userPassword, roleTypes, email, nickname, memo, null);
+    public static AdminAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo) {
+        return AdminAccount.of(userId, userPassword, roleTypes, email, nickname, memo, null);
     }
 
     /**
@@ -95,8 +95,8 @@ public class UserAccount extends AuditingFields {
      * @param createUser
      * @return
      */
-    public static UserAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo, String createUser) {
-        return new UserAccount(userId, userPassword, roleTypes, email, nickname, memo, createUser);
+    public static AdminAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo, String createUser) {
+        return new AdminAccount(userId, userPassword, roleTypes, email, nickname, memo, createUser);
     }
 
     public void deleteRoleType(RoleType roleType) {
@@ -114,7 +114,7 @@ public class UserAccount extends AuditingFields {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof UserAccount that)) return false;
+        if (!(o instanceof AdminAccount that)) return false;
         return userId != null && userId.equals(that.getUserId());
     }
 

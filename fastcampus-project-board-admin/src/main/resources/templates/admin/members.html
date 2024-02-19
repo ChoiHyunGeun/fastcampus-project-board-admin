@@ -27,7 +27,7 @@
 
 <!--/* 페이지 전용 스크립트 */-->
 <script src="/js/plugins/jsgrid/jsgrid.min.js"></script>
-<script>
+<script id="jsgrid-javascript">
     $(function () {
         $("#jsgrid-admin-members").jsGrid({
             height: "100%",
@@ -40,13 +40,13 @@
 
             data: [
                 {
-                    "userId": "uno",
-                    "nickname": "Uno",
-                    "email": "uno@email.com",
+                    "userId": "hg",
+                    "nickname": "hg",
+                    "email": "hg@email.com",
                     "memo": "test memo.",
                     "roleTypes": "ADMIN",
-                    "createdBy": "Uno",
-                    "createdAt": "2022-01-01 00:00:00"
+                    "createUser": "hg",
+                    "createDate": "2024-02-16 00:00:00"
                 }
             ],
 
@@ -56,8 +56,8 @@
                 { name: "email", title: "이메일", type: "text", width: 120 },
                 { name: "memo", title: "메모", type: "text", width: 150 },
                 { name: "roleTypes", title: "권한", type: "select", items: [{"name": "ADMIN", "description": "관리자"}], valueField: "name", textField: "description", width: 100 },
-                { name: "createdBy", title: "작성자", type: "text", width: 60 },
-                { name: "createdAt", title: "작성일시", type: "text", width: 100 },
+                { name: "createUser", title: "작성자", type: "text", width: 60 },
+                { name: "createDate", title: "작성일시", type: "text", width: 100 },
                 { type: "control" }
             ]
         });
