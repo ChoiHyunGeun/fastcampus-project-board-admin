@@ -41,7 +41,7 @@ public class SecurityConfig {
      * @return
      * @throws Exception
      */
-    @Bean //TODO : 최초로 pc 켜고, 서버를 실행 시키고, 로그인을 하면 error 화면이 나옴. 딱 이 조건일 때만 최초로 발생함. 확인하고 수정하기
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         String[] rolesAboveManager = {RoleType.MANAGER.name(), RoleType.ADMIN.name(), RoleType.DEVELOPER.name()};
 
