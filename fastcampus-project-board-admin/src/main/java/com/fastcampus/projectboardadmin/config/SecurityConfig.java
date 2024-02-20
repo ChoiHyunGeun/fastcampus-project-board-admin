@@ -96,7 +96,12 @@ public class SecurityConfig {
             String providerId = String.valueOf(kakaoResponse.id());
             String username = registrationId + "_" + providerId;
             String dummyPassword = passwordEncoder.encode("{bcrypt}" + UUID.randomUUID());
-            Set<RoleType> roleTypes = Set.of(RoleType.USER);
+            Set<RoleType> roleTypes = Set.of(RoleType.MANAGER);
+
+            /**
+             * TODO 관리자 회원가입은 하나의 절차가 더 있었으면 좋겠음.
+             * 뭐 관리자 인증 번호라던지 회사에서 부여받은 코드를 입력하는 절차가 더 필요할 것 같다.
+             */
 
             return adminAccountService.searchUser(username)
                     .map(BoardAdminPrincipal::from)
